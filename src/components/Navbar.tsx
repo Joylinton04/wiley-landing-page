@@ -22,7 +22,7 @@ const Navbar = () => {
           <img
             src={wileyLogo}
             alt=""
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center ssm:object-contain"
           />
         </h1>
         <form>
