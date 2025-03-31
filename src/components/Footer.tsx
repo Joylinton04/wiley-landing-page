@@ -35,7 +35,7 @@ const Footer = () => {
     <div className="py-20 text-white bg-black">
       <div className="max-w-screen-2xl mx-auto">
         <div className="px-padLR">
-          <div className="flex justify-between gap-8">
+          <div className="flex justify-between gap-8 lgg:gap-6 ssm:flex-col ssm:gap-12">
             <div className="flex gap-6 flex-col font-bold">
               <a className="hover:underline" href="/">
                 FOR INDIVIDUALS
@@ -66,14 +66,14 @@ const Footer = () => {
 
           <div>
             <hr className="mt-10 text-secwhite" />
-            <div className="flex gap-6 justify-between mt-10">
-              <p className="text-secwhite text-sm w-[40%]">
+            <div className="flex gap-6 justify-between mt-10 lgg:flex-col-reverse">
+              <p className="text-secwhite text-sm w-[40%] lgg:w-full">
                 Copyright @ 2000-2025 by John Wiley & Sons, Inc., or related
                 companies. All rights reserved, including rights for text and
                 data mining and training of artificial technologies or similar
                 technologies.
               </p>
-              <div className="flex gap-4 w-1/2 text-xs">
+              <div className="flex gap-4 w-1/2 text-xs lgg:w-full ssm:flex-col">
                 <a href="/" className="hover:underline border-l h-max px-4 w-max">
                   Language/Location
                 </a>

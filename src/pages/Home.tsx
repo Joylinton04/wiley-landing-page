@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "../components/Navbar";
 import { Play } from "lucide-react";
-import { title } from "process";
 import Footer from "@/components/Footer";
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
 const Home = () => {
   const BackgroundLayout = ({ children, pic }: Props) => {
     return (
-      <div className="relative h-[35rem] bg-dark transition-all duration-500">
+      <div className="relative h-[35rem] mdd:h-max ssm:h-[20rem] bg-dark transition-all duration-500">
         <div
           className="absolute inset-0 z-0 transition-opacity duration-700"
           style={{
@@ -21,7 +20,7 @@ const Home = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#161616]/80 to-[#161616]/20 transition-all duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#161616]/80 ssm:from-[#161616]/20 to-[#161616]/20 transition-all duration-500" />
         </div>
         <div className="relative z-10">{children}</div>
       </div>
@@ -98,15 +97,15 @@ const Home = () => {
       <BackgroundLayout pic="url('/Alta Marketing Hero Image.jpg')">
         <div className="max-w-screen-2xl mx-auto">
           <div className="px-padLR text-white py-20 space-y-12">
-            <h1 className="font-extrabold text-[56px]">
+            <h1 className="font-extrabold text-[56px] mdd:text-[48px] ssm:hidden">
               Achievement within reach
             </h1>
-            <p className="text-2xl">
+            <p className="text-2xl mdd:text-lg ssm:hidden">
               Knewton Alta is accessible and affordable adaptive courseware that
               provides students with the support they need at the moment they
               need it.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ssm:hidden">
               <Button className="font-bold text-base rounded-none p-8 bg-white text-black hover:text-white">
                 Get Evaluation Access
               </Button>
@@ -121,20 +120,20 @@ const Home = () => {
       {/* section 1 */}
       <div className="bg-secwhite">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="px-padLR py-20 flex gap-8">
-            <div className="max-h-[26rem] w-1/2">
+          <div className="px-padLR py-20 flex gap-8 mdd:items-start ssm:flex-col ssm:px-7">
+            <div className="max-h-[26rem] w-1/2 ssm:w-full">
               <img
                 src="/Alta Homepage Video Image.png"
                 alt=""
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center mdd:object-contain"
               />
             </div>
-            <div className="space-y-12 w-1/2 h-max">
-              <h1 className="font-bold text-title">
+            <div className="space-y-12 w-1/2 h-max mdd:space-y-6 ssm:w-full">
+              <h1 className="font-bold text-title mdd:text-[28px]">
                 Personalized learning that's impactful, accessible, and
                 affordable
               </h1>
-              <p className="text-base font-normal">
+              <p className="text-base font-normal ssm:leading-8">
                 The Alta learning experience goes beyond homework – it pairs
                 practice with personalized learning that offers detailed answer
                 explanations, integrated just-in-time instruction, and
@@ -159,9 +158,12 @@ const Home = () => {
             Start where you are. We'll take you where you want to go.
           </h1>
           <div className="mt-10">
-            <div className="grid grid-cols-3 grid-rows-2 flex-wrap">
+            <div className="grid grid-cols-3 grid-rows-2 flex-wrap mdd:grid-cols-2 ssm:grid-cols-1">
               {info.map((info, index) => (
-                <div className="border h-[14rem] px-6 py-8 space-y-8" key={index}>
+                <div
+                  className="border h-[14rem] px-6 py-8 space-y-8"
+                  key={index}
+                >
                   <h1 className="text-center text-[#18b7fb] font-bold text-lg">
                     {info.title}
                   </h1>
@@ -178,8 +180,8 @@ const Home = () => {
       {/* section 3 */}
       <div className="bg-[#133d80] h-full">
         <div className="max-w-screen-2xl mx-auto mt-20">
-          <div className="px-padLR py-20 flex gap-8">
-            <div className="space-y-12 text-white">
+          <div className="px-padLR py-20 flex gap-8 mdd:items-center ssm:flex-col">
+            <div className="space-y-12 text-white ssm:flex ssm:items-center ssm:flex-col ssm:space-y-6">
               <h1 className="text-title font-bold">
                 Explore Knewton Alta course offerings
               </h1>
@@ -193,7 +195,7 @@ const Home = () => {
               </Button>
             </div>
             <div className="w-full">
-              <div className="grid grid-cols-2 cursor-pointer w-full">
+              <div className="grid grid-cols-2 cursor-pointer w-full mdd:grid-cols-1">
                 {[
                   "Biology",
                   "Chemistry",
@@ -205,7 +207,7 @@ const Home = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="border border-[#f5f5f5] bg-[#f5f5f5]/10 h-20 flex items-center justify-center text-center text-white hover:bg-[#f5f5f5] hover:text-priText font-bold"
+                    className="border border-[#f5f5f5] bg-[#f5f5f5]/10 h-20 flex items-center justify-center text-center text-white hover:bg-[#f5f5f5] hover:text-priText font-bold "
                   >
                     {item}
                   </div>
@@ -218,7 +220,7 @@ const Home = () => {
 
       {/* section 4  */}
       <div className="max-w-screen-2xl mx-auto mt-20">
-        <div className="px-padLR space-y-12 text-priText">
+        <div className="px-padLR space-y-12 text-priText ssm:px-7">
           <div className="space-y-6">
             <h1 className="text-center font-bold text-title">
               Adaptive technology. Data-driven insights. Seamless integration.
@@ -230,15 +232,15 @@ const Home = () => {
               delivers precisely what students need at the moment they need it.
             </p>
           </div>
-          <div className="flex justify-between gap-12">
-            <div className="h-[40rem] w-1/2">
+          <div className="flex justify-between gap-12 ssm:flex-col">
+            <div className="h-[40rem] w-1/2 ssm:w-full">
               <img
                 src="/Alta Test Dashboard.png"
                 alt=""
                 className="h-full w-full"
               />
             </div>
-            <div className="flex flex-col justify-between w-1/2 gap-2">
+            <div className="flex flex-col justify-between w-1/2 gap-2 ssm:w-full">
               <h1 className="font-bold text-2xl">
                 Here's what makes Knewton Alta so powerful
               </h1>
@@ -272,9 +274,9 @@ const Home = () => {
             What are the instructors saying about Alta?
           </h1>
           <div className="flex gap-4 mt-16 items-center justify-center py-10">
-            <div className="flex gap-6">
+            <div className="flex gap-6 lgg:gap-12 ssm:flex-col">
               <div>
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 lgg:flex-col">
                   <div className="w-80 h-80">
                     <img
                       src="/Mikelong Video Screenshot Alta.jpg"
@@ -296,7 +298,7 @@ const Home = () => {
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 lgg:flex-col">
                   <div className="w-80 h-80">
                     <img
                       src="/Alta.jpg"
@@ -328,21 +330,30 @@ const Home = () => {
           Check out the latest news from Wiley Alta community
         </h1>
         <div className="flex items-center justify-center mt-10">
-          <div className="px-padLR flex justify-between gap-12">
+          <div className="px-padLR flex justify-between gap-12 lgg:gap-6 mdd:flex-wrap">
             {articleSection.map((article, index) => (
-              <div className="min-h-[50rem] bg-secwhite py-6 flex flex-col gap-12 w-full border border-gray-100 rounded" key={index}>
-                <img src={article.img} alt="" className="h-[16rem] object-cover object-center"/>
+              <div
+                className="min-h-[50rem] bg-secwhite py-6 flex flex-col gap-12 w-full border border-gray-100 rounded"
+                key={index}
+              >
+                <img
+                  src={article.img}
+                  alt=""
+                  className="h-[16rem] object-cover object-center"
+                />
                 <div className="px-6 text-priText leading-8">
                   {article.description}
                 </div>
-                <a className="px-6 underline cursor-pointer" href="/">Read the Article</a>
+                <a className="px-6 underline cursor-pointer" href="/">
+                  Read the Article
+                </a>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
