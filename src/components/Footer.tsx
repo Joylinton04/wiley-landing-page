@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <div className="py-20 text-white bg-black">
       <div className="max-w-screen-2xl mx-auto">
-        <div className="px-padLR">
+        <div className="px-padLR ssm:px-6">
           <div className="flex justify-between gap-8 lgg:gap-6 ssm:flex-col ssm:gap-12">
             <div className="flex gap-6 flex-col font-bold">
               <a className="hover:underline" href="/">

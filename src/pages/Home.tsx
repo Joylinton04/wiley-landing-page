@@ -270,7 +270,7 @@ const Home = () => {
       {/* section 6 */}
       <div className="">
         <div className="max-w-screen-2xl mx-auto py-34 py-12 bg-secwhite">
-          <h1 className="text-center text-title font-bold">
+          <h1 className="text-center text-title font-bold ssm:px-2">
             What are the instructors saying about Alta?
           </h1>
           <div className="flex gap-4 mt-16 items-center justify-center py-10">
@@ -330,7 +330,7 @@ const Home = () => {
           Check out the latest news from Wiley Alta community
         </h1>
         <div className="flex items-center justify-center mt-10">
-          <div className="px-padLR flex justify-between gap-12 lgg:gap-6 mdd:flex-wrap">
+          <div className="px-padLR flex justify-between gap-12 lgg:gap-6 mdd:flex-wrap ssm:px-6">
             {articleSection.map((article, index) => (
               <div
                 className="min-h-[50rem] bg-secwhite py-6 flex flex-col gap-12 w-full border border-gray-100 rounded"

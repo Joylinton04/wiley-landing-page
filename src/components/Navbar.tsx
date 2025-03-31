@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="bg-secwhite flex items-center justify-between py-3 px-padLR ssm:py-6">
+      <div className="bg-secwhite flex items-center justify-between py-3 px-padLR ssm:py-6 ssm:px-5">
         <h1 className="h-8">
           <img
             src={wileyLogo}
@@ -32,7 +32,7 @@ const Navbar = () => {
             className="h-14 border-2 outline-none border-black px-6 text-lg py-4 w-[40rem] lgg:w-[30rem] mdd:w-[20rem] ssm:hidden"
           />
         </form>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 ssm:gap-4">
           <Search size={25} className="sm:hidden"/>
           <User size={25} />
           <ShoppingCart size={25} />
