@@ -107,7 +107,7 @@ const Home = () => {
               need it.
             </p>
             <div className="flex items-center gap-4">
-              <Button className="font-bold text-base rounded-none p-8 bg-white text-black">
+              <Button className="font-bold text-base rounded-none p-8 bg-white text-black hover:text-white">
                 Get Evaluation Access
               </Button>
               <Button className="font-bold text-base rounded-none p-8 bg-transparent border border-white">
