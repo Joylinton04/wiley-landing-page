@@ -14,6 +14,8 @@ const Navbar = () => {
     { name: "Community & Resources", path: "/" },
     { name: "Partners", path: "/" },
   ];
+
+
   return (
     <div className="">
       <div className="bg-secwhite flex items-center justify-between py-3 px-padLR">

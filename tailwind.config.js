@@ -11,7 +11,8 @@ export default {
   			default: 'Open Sans, sans-serif'
   		},
   		colors: {
-  			secwhite: '#eaeaea'
+  			secwhite: '#eaeaea',
+			priText: "#313131",
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -19,8 +20,11 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		padding: {
-			padLR: '5rem'
+			padLR: '3rem',
 		},
+		fontSize: {
+			title: '32px'
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
